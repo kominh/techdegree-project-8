@@ -119,3 +119,4 @@ modalClose.addEventListener("click", () => {
   }
   const search = document.querySelector('#userInput');
   search.addEventListener('keyup', searchFunction);
+  
