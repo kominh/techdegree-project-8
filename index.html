@@ -12,18 +12,20 @@
   <body>
     <header class="header">
       <h1>Awesome Startup Employee Directory</h1>
-      
+      <!--
       <div class="input-search">
         <input type= "text" placeholder="Type a name..." id="userInput">
       </div>
 
-        
+        ---->
+        <div class="input-search">
+          <input type= "text" placeholder="Type a name..." id="userInput">
+          </div>
     
       </header>
 
     <main class="grid-container">
-
-    
+ 
       <div class="card">
         <img class="avatar" src="" />
         <div class="text-container">
@@ -39,6 +41,8 @@
     <!-- copy & past the card structure to make 12 total car divs -->
 
     <div class="overlay hidden">
+
+      
       <div class="modal">
         
         <button class="modal-close">X</button>
@@ -55,6 +59,10 @@
           </div>
         </div>
       </div>
+        <div class="modal-button">
+          <button class="modal-prev"><</button>
+          <button class="modal-next">></button>
+        </div>
     </div>
 
     <script src="js/app.js"></script>

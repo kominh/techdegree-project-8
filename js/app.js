@@ -6,7 +6,7 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-let index;
+
 
 // fetch data from API
 
@@ -93,29 +93,29 @@ modalClose.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
 
+
 //////
 
 //search bar function
 
-function searchFunction() {
-  //declare variables
-  const input = document.getElementById('userInput');
-  const filter = input.value.toUpperCase();
-  const names = document.getElementsByClassName('name');
-
-    //loop through all items, and hide those that don't match the search query
-
-    for(i = 0; i < names.length; i++) {
-      a = names[i].getElementsByClassName("name")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1){
-        names[i].style.display = "";
-      } else {
-        names[i].style.display ="none";
+  function searchFunction() {
+    //declare variables
+    const input = document.getElementById('userInput');
+    const filter = input.value.toUpperCase();
+    const names = document.getElementsByClassName('card');
+    let a, txtValue;
+      //loop through all items, and hide those that don't match the search query
+  
+      for(i = 0; i < names.length; i++) {
+        a = names[i].getElementsByClassName("name")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1){
+          names[i].style.display = "";
+        } else {
+          names[i].style.display ="none";
+        }
       }
-    }
-
-}
-
-
-
+  
+  }
+  const search = document.querySelector('#userInput');
+  search.addEventListener('keyup', searchFunction);
