@@ -94,6 +94,7 @@ modalClose.addEventListener("click", () => {
 });
 
 
+  
 //////
 
 //search bar function
