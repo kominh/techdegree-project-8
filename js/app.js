@@ -6,7 +6,8 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-
+const modalNext = document.querySelector(".modal-next");
+const modalPrev = document.querySelector(".modal-prev");
 
 // fetch data from API
 
@@ -94,7 +95,18 @@ modalClose.addEventListener("click", () => {
 });
 
 
+//modal-next button 
+modalNext.addEventListener('click', () =>{
   
+});
+
+
+//modal-previous button 
+modalPrev.addEventListener('click', () =>{
+  
+});
+
+
 //////
 
 //search bar function
@@ -120,4 +132,3 @@ modalClose.addEventListener("click", () => {
   }
   const search = document.querySelector('#userInput');
   search.addEventListener('keyup', searchFunction);
-  
