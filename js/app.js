@@ -97,13 +97,31 @@ modalClose.addEventListener("click", () => {
 
 //modal-next button 
 modalNext.addEventListener('click', () =>{
-  
+
+  //get data-index of current card
+    let data-index =  document.getAttribute("data-index");
+    //add 1 to current index
+  if(data-index >=1){ 
+    data-index + 1;
+  }else {
+
+  }
+  displayModal(index);
 });
 
 
 //modal-previous button 
 modalPrev.addEventListener('click', () =>{
-  
+
+  //get data-index of current card
+  let data-index =  document.getAttribute("data-index");
+  if(data-index >=1){ 
+    //subtract 1 from current index
+    data-index - 1;
+  }else {
+
+  }
+  displayModal(index);
 });
 
 
