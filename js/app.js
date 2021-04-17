@@ -96,7 +96,8 @@ modalClose.addEventListener("click", () => {
 
 //modal-next button 
 //get data-index of current card
-let dataIndex = document.getElementsByClassName("modal").attributes;
+let dataIndex = card.getAttribute("data-index");
+
 modalNext.addEventListener('click', () =>{
 
   
