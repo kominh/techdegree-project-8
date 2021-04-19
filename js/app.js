@@ -101,9 +101,9 @@ modalClose.addEventListener("click", () => {
 
 modalNext.addEventListener('click', () =>{
  //add 1 to current index
-  dataIndex + 1;
+  let newIndex = dataIndex + 1;
  //calling display function    
-  displayModal(dataIndex);
+  displayModal(newIndex);
 });
 
 
@@ -111,9 +111,9 @@ modalNext.addEventListener('click', () =>{
 modalPrev.addEventListener('click', () =>{
 
       //subtract 1 from current index
-      dataIndex - 1; 
+     let newIndex = dataIndex - 1; 
   //calling display function
-  displayModal(dataIndex);
+  displayModal(newIndex);
 });
 
 
