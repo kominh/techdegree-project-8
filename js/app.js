@@ -8,6 +8,9 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const modalNext = document.querySelector(".modal-next");
 const modalPrev = document.querySelector(".modal-prev");
+const dataIndex = document.querySelector("data-index");
+
+
 // fetch data from API
 
 fetch(urlAPI)
@@ -95,37 +98,22 @@ modalClose.addEventListener("click", () => {
 
 
 //modal-next button 
-//get data-index of current card
-let dataIndex = card.getAttribute("data-index");
 
 modalNext.addEventListener('click', () =>{
-
-  
-    
-    //add 1 to current index
-  if(dataIndex >=1){ 
-    dataIndex +1;
-  }else {
-    
-  }
-  //calling display function
-  displayModal(index);
+ //add 1 to current index
+  dataIndex + 1;
+ //calling display function    
+  displayModal(dataIndex);
 });
 
 
 //modal-previous button 
 modalPrev.addEventListener('click', () =>{
 
-  
-  
-  if(dataIndex >=1){ 
-    //subtract 1 from current index
-    dataIndex -1;
-  }else {
-    
-  }
+      //subtract 1 from current index
+      dataIndex - 1; 
   //calling display function
-  displayModal(index);
+  displayModal(dataIndex);
 });
 
 
