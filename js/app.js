@@ -8,7 +8,7 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const modalNext = document.querySelector(".modal-next");
 const modalPrev = document.querySelector(".modal-prev");
-const dataIndex = document.querySelector("data-index");
+let dataIndex = document.querySelector("data-index");
 
 
 // fetch data from API
@@ -101,7 +101,12 @@ modalClose.addEventListener("click", () => {
 
 modalNext.addEventListener('click', () =>{
  //add 1 to current index
-  let newIndex = dataIndex + 1;
+  let newIndex = parseInt(dataIndex += 1);
+    if (dataIndex <= 11){
+      newIndex ++;
+    }else {
+      newIndex = 0;
+    }
  //calling display function    
   displayModal(newIndex);
 });
@@ -111,9 +116,15 @@ modalNext.addEventListener('click', () =>{
 modalPrev.addEventListener('click', () =>{
 
       //subtract 1 from current index
-     let newIndex = dataIndex - 1; 
+     let newIndex = parseInt(dataIndex -= 1); 
+     if(dataIndex >= 0){
+       newIndex --;
+     } else {
+       newIndex = 11;
+     }
   //calling display function
   displayModal(newIndex);
+     
 });
 
 
