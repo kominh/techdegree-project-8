@@ -102,10 +102,10 @@ modalClose.addEventListener("click", () => {
 modalNext.addEventListener('click', () =>{
  //add 1 to current index
   let newIndex = parseInt(dataIndex += 1);
-    if (dataIndex <= 11){
+    if (newIndex <= 11){
       newIndex ++;
     }else {
-      newIndex = 0;
+      newIndex = '';
     }
  //calling display function    
   displayModal(newIndex);
@@ -117,10 +117,10 @@ modalPrev.addEventListener('click', () =>{
 
       //subtract 1 from current index
      let newIndex = parseInt(dataIndex -= 1); 
-     if(dataIndex >= 0){
+     if(newIndex >= 0){
        newIndex --;
      } else {
-       newIndex = 11;
+       newIndex = '';
      }
   //calling display function
   displayModal(newIndex);
