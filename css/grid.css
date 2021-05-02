@@ -4,12 +4,14 @@
 
 .header {
   display: grid;
-
-  background-color: aquamarine;
 }
 .grid-container {
   display: grid;
   grid-template-columns: minmax(450px, 700px);
+}
+.modal-button {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
 }
 
 @media (min-width: 768px) {
