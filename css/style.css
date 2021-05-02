@@ -75,7 +75,7 @@ h2 {
   margin: 10px;
 }
 .card:hover {
-  box-shadow: 0px 0px 10px #1c49db;
+  box-shadow: 0px 0px 15px #1c49db;
   transform: scale(1.08);
   cursor: pointer;
 }
