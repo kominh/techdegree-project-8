@@ -8,7 +8,7 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const modalNext = document.querySelector(".modal-next");
 const modalPrev = document.querySelector(".modal-prev");
-let dataIndex = document.querySelector("data-index");
+let dataIndex = null;
 
 
 // fetch data from API
@@ -74,6 +74,8 @@ function displayModal(index) {
     street.name
   }, ${state} ${postcode}</p>
             <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+            <button class="modal-prev" onclick="previous()"><</button>
+          <button class="modal-next" onclick="next()">></button>
             </div>
             
             `;
@@ -87,6 +89,7 @@ gridContainer.addEventListener("click", e => {
     // select the card element based on its proximity to actual element clicked
     const card = e.target.closest(".card");
     const index = card.getAttribute("data-index");
+     dataIndex = parseInt(index);
 
     displayModal(index);
   }
@@ -99,33 +102,79 @@ modalClose.addEventListener("click", () => {
 
 //modal-next button 
 
-modalNext.addEventListener('click', () =>{
- //add 1 to current index
-  let newIndex = parseInt(dataIndex += 1);
-    if (newIndex <= 11){
-      newIndex ++;
-    }else {
-      newIndex = '';
-    }
- //calling display function    
-  displayModal(newIndex);
-});
+//          modalNext.addEventListener('click', () =>{
+//          //add 1 to current index
+            
+//              if (dataIndex < 11){
+//                dataIndex ++;
+//                displayModal(dataIndex);
+//             } else if (dataIndex === 11){
+//                  dataIndex = 0;
+//                  displayModal(dataIndex);
+//              }
+//              else {
+//                return;
+//              }
+          //calling display function    
+            
+//          });
+
+function next() {
+  //add 1 to current index
+   
+     if (dataIndex < 11){
+       dataIndex ++;
+       displayModal(dataIndex);
+     } else if (dataIndex === 11){
+         dataIndex = 0;
+         displayModal(dataIndex);
+     }
+     else {
+       return;
+     }
+  //calling display function    
+ 
+ }
 
 
 //modal-previous button 
-modalPrev.addEventListener('click', () =>{
+//        modalPrev.addEventListener('click', () =>{
 
-      //subtract 1 from current index
-     let newIndex = parseInt(dataIndex -= 1); 
-     if(newIndex >= 0){
-       newIndex --;
-     } else {
-       newIndex = '';
-     }
-  //calling display function
-  displayModal(newIndex);
+              //subtract 1 from current index
+            
+//            if(dataIndex > 0){
+//              dataIndex --;
+//              displayModal(dataIndex);
+//            } else if (dataIndex === 0){
+//              dataIndex = 11;
+//              displayModal(dataIndex);
+//          }
+
+//            else {
+//              return;
+//            }
+          //calling display function
+          
+            
+//        });
+
+function previous() {
+  //subtract 1 from current index
      
-});
+  if(dataIndex > 0){
+    dataIndex --;
+    displayModal(dataIndex);
+  } else if (dataIndex === 0){
+   dataIndex = 11;
+   displayModal(dataIndex);
+}
+
+  else {
+    return;
+  }
+//calling display function
+
+}
 
 
 //////
