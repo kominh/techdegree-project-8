@@ -113,8 +113,7 @@ function next() {
      }
      else {
        return;
-     }
-  //calling display function    
+     } 
  
  }
 
@@ -133,7 +132,6 @@ function previous() {
   else {
     return;
   }
-//calling display function
 
 }
 
