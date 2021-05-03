@@ -101,24 +101,6 @@ modalClose.addEventListener("click", () => {
 
 
 //modal-next button 
-
-//          modalNext.addEventListener('click', () =>{
-//          //add 1 to current index
-            
-//              if (dataIndex < 11){
-//                dataIndex ++;
-//                displayModal(dataIndex);
-//             } else if (dataIndex === 11){
-//                  dataIndex = 0;
-//                  displayModal(dataIndex);
-//              }
-//              else {
-//                return;
-//              }
-          //calling display function    
-            
-//          });
-
 function next() {
   //add 1 to current index
    
@@ -136,28 +118,7 @@ function next() {
  
  }
 
-
-//modal-previous button 
-//        modalPrev.addEventListener('click', () =>{
-
-              //subtract 1 from current index
-            
-//            if(dataIndex > 0){
-//              dataIndex --;
-//              displayModal(dataIndex);
-//            } else if (dataIndex === 0){
-//              dataIndex = 11;
-//              displayModal(dataIndex);
-//          }
-
-//            else {
-//              return;
-//            }
-          //calling display function
-          
-            
-//        });
-
+//modal-previous button
 function previous() {
   //subtract 1 from current index
      
